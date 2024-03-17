@@ -1,0 +1,40 @@
+@use '@/assets/variables/borders.scss' as b;
+@use '@/assets/mixins/class-generator.scss' as cg;
+@use '@/assets/variables/colors.scss' as c;
+
+$colors: (
+  'blue': c.$blue,
+  'blue-light': c.$blue-light,
+  'green': c.$green,
+  'green-light': c.$green-light,
+  'beige': c.$beige,
+  'white': c.$white,
+  'white-plain': c.$white-plain,
+  'gray': c.$gray,
+  'black': c.$black
+);
+
+$borders: (
+  's': b.$s solid,
+  'm': b.$m solid,
+  'l': b.$l solid,
+  'xl': b.$xl solid
+);
+
+$border-radiuses: (
+  's': b.$small,
+  'm': b.$medium,
+  'l': b.$rounded,
+  'xl': b.$pill
+);
+
+.border {
+  border: b.$s solid c.$black;
+  @include cg.class-generator($list: $borders, $attribute: 'border');
+  @include cg.class-generator($list: $colors, $attribute: 'border-color');
+}
+
+.rounded {
+  border-radius: b.$rounded;
+  @include cg.class-generator($list: $border-radiuses, $attribute: 'border-radius');
+}

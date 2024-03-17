@@ -1,0 +1,22 @@
+@use '@/assets/variables/colors.scss' as c;
+@use '@/assets/mixins/class-generator.scss' as cg;
+
+$colors: (
+  'blue': c.$blue,
+  'blue-light': c.$blue-light,
+  'green': c.$green,
+  'green-light': c.$green-light,
+  'beige': c.$beige,
+  'white': c.$white,
+  'white-plain': c.$white-plain,
+  'gray': c.$gray,
+  'black': c.$black
+);
+
+.color {
+  @include cg.class-generator($list: $colors, $attribute: 'color');
+}
+
+.bg-color {
+  @include cg.class-generator($list: $colors, $attribute: 'background-color');
+}

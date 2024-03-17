@@ -1,0 +1,22 @@
+@use '@/assets/variables/typography.scss' as t;
+@use '@/assets/mixins/class-generator.scss' as cg;
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
+$font-sizes: (
+  'xs': t.$xs,
+  'sm': t.$sm,
+  'md': t.$md,
+  'lg': t.$lg
+);
+
+$font-weights: (
+  'regular': t.$regular,
+  'medium': t.$medium,
+  'semibold': t.$semibold,
+  'bold': t.$bold
+);
+
+.text {
+  @include cg.class-generator($list: $font-sizes, $attribute: 'font-size');
+  @include cg.class-generator($list: $font-weights, $attribute: 'font-weight');
+}
