@@ -1,0 +1,13 @@
+@use '@/assets/classes/colors.scss';
+@use '@/assets/classes/typography.scss';
+@use '@/assets/classes/borders.scss';
+@use '@/assets/classes/spacings.scss';
+@use '@/assets/classes/layout.scss';
+@use '@/assets/variables/index.scss' as v;
+@use './base.scss';
+
+h1 {
+  font-size: v.$lg;
+  font-weight: v.$bold;
+  margin-bottom: 1rem;
+}

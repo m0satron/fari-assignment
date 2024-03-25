@@ -1,0 +1,35 @@
+@use 'variables/typography.scss' as t;
+@use 'variables/colors.scss' as c;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: calc(100vh - 1rem);
+
+  color: c.$white;
+  background: c.$primary;
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family: t.$font-family-montserrat;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  height: 100vh;
+  padding: 1rem;
+}
+
+textarea {
+  font-family: t.$font-family-montserrat;
+}
