@@ -1,0 +1,57 @@
+@use '@/assets/variables/spacings.scss' as s;
+@use '@/assets/mixins/class-generator.scss' as cg;
+
+$spacings: (
+  'small': s.$small,
+  'base': s.$base,
+  'medium': s.$medium,
+  'large': s.$large,
+  'auto': auto
+);
+
+//TODO
+
+.p {
+  @include cg.class-generator($list: $spacings, $attribute: 'padding');
+}
+
+.pt {
+  @include cg.class-generator($list: $spacings, $attribute: 'padding-top');
+}
+
+.pb {
+  @include cg.class-generator($list: $spacings, $attribute: 'padding-bottom');
+}
+
+.pl {
+  @include cg.class-generator($list: $spacings, $attribute: 'padding-left');
+}
+
+.pr {
+  @include cg.class-generator($list: $spacings, $attribute: 'padding-right');
+}
+
+.m {
+  @include cg.class-generator($list: $spacings, $attribute: 'margin');
+}
+
+.mt {
+  @include cg.class-generator($list: $spacings, $attribute: 'margin-top');
+}
+
+.mb {
+  @include cg.class-generator($list: $spacings, $attribute: 'margin-bottom');
+}
+
+.ml {
+  @include cg.class-generator($list: $spacings, $attribute: 'margin-left');
+}
+
+.mr {
+  @include cg.class-generator($list: $spacings, $attribute: 'margin-right');
+}
+
+.mx {
+  @include cg.class-generator($list: $spacings, $attribute: 'margin-left');
+  @include cg.class-generator($list: $spacings, $attribute: 'margin-right');
+}

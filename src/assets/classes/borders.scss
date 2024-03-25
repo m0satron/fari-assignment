@@ -5,16 +5,12 @@
 $colors: (
   'blue': c.$blue,
   'blue-light': c.$blue-light,
-  'green': c.$green,
-  'green-light': c.$green-light,
-  'beige': c.$beige,
   'white': c.$white,
-  'white-plain': c.$white-plain,
-  'gray': c.$gray,
   'black': c.$black
 );
 
 $borders: (
+  'none': none,
   's': b.$s solid,
   'm': b.$m solid,
   'l': b.$l solid,
@@ -22,9 +18,12 @@ $borders: (
 );
 
 $border-radiuses: (
+  'none': b.$none,
   's': b.$small,
   'm': b.$medium,
   'l': b.$rounded,
+  //TODO
+  'l2': b.$rounded-large,
   'xl': b.$pill
 );
 
@@ -37,4 +36,23 @@ $border-radiuses: (
 .rounded {
   border-radius: b.$rounded;
   @include cg.class-generator($list: $border-radiuses, $attribute: 'border-radius');
+}
+
+.rounded-es {
+  border-radius: b.$rounded;
+  @include cg.class-generator($list: $border-radiuses, $attribute: 'border-end-start-radius');
+}
+
+.rounded-ee {
+  border-radius: b.$rounded;
+  @include cg.class-generator($list: $border-radiuses, $attribute: 'border-end-end-radius');
+}
+.rounded-ss {
+  border-radius: b.$rounded;
+  @include cg.class-generator($list: $border-radiuses, $attribute: 'border-start-start-radius');
+}
+
+.rounded-se {
+  border-radius: b.$rounded;
+  @include cg.class-generator($list: $border-radiuses, $attribute: 'border-start-end-radius');
 }

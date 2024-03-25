@@ -12,7 +12,14 @@ $justify: (
   'center': center,
   'between': space-between,
   'around': space-around,
-  'evenly': space-evenly
+  'evenly': space-evenly,
+  'end': flex-end
+);
+
+$wrap: (
+  'wrap': wrap,
+  'wrap-reverse': wrap-reverse,
+  'nowrap': nowrap
 );
 
 $align: (
@@ -30,9 +37,15 @@ $display: (
   'grid': grid
 );
 
+$grow: (
+  '1': 1,
+  '0': 0
+);
+
 .flex {
   display: flex;
   @include cg.class-generator($list: $direction, $attribute: 'flex-direction');
+  @include cg.class-generator($list: $wrap, $attribute: 'flex-wrap');
 }
 
 .justify {
@@ -41,6 +54,14 @@ $display: (
 
 .align {
   @include cg.class-generator($list: $align, $attribute: 'align-items');
+}
+
+.content {
+  @include cg.class-generator($list: $align, $attribute: 'align-content');
+}
+
+.grow {
+  @include cg.class-generator($list: $grow, $attribute: 'flex-grow');
 }
 
 .display {
@@ -61,4 +82,25 @@ $display: (
 
 .static {
   position: static;
+}
+
+//TODO
+
+.h-full {
+  height: 100%;
+}
+.h-screen {
+  height: 100vh;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.gap-1 {
+  gap: 1rem;
 }

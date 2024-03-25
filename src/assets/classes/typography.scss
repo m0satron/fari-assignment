@@ -3,20 +3,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
 $font-sizes: (
-  'xs': t.$xs,
-  'sm': t.$sm,
-  'md': t.$md,
-  'lg': t.$lg
+  'size-xs': t.$xs,
+  'size-sm': t.$sm,
+  'size-md': t.$md,
+  'size-lg': t.$lg,
+  'size-xl': t.$xl
 );
 
 $font-weights: (
-  'regular': t.$regular,
-  'medium': t.$medium,
-  'semibold': t.$semibold,
-  'bold': t.$bold
+  'weight-s': t.$thin,
+  'weight-md': t.$medium,
+  'weight-sb': t.$semibold,
+  'weight-b': t.$bold
+);
+
+$align: (
+  'left': left,
+  'right': right,
+  'center': center
 );
 
 .text {
+  font-weight: t.$regular;
   @include cg.class-generator($list: $font-sizes, $attribute: 'font-size');
   @include cg.class-generator($list: $font-weights, $attribute: 'font-weight');
+  @include cg.class-generator($list: $align, $attribute: 'text-align');
 }
