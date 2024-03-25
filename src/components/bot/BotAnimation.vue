@@ -84,7 +84,7 @@ onMounted(loop)
 onUnmounted(() => animationFrameId && cancelAnimationFrame(animationFrameId))
 
 watch(
-  () => [props.audioSrc, props.loading],
+  [() => props.audioSrc, () => props.loading],
   ([newSrc, isLoading]) => {
     if (isLoading) return
 
