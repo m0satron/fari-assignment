@@ -1,9 +1,10 @@
 <template>
   <div class="flex flex-column align-center">
-    <BotAnimation :audio-src="voiceMessage" class="mb-base" :loading="loading" />
+    <BotAnimation :audio-src="voiceMessage" class="mb-large" :loading="loading" />
     <ChatContainer
       :loading="loading"
       :messages="messages"
+      class="mt-large mb-large"
       @post:message="(message) => $emit('post:message', message)"
     />
   </div>
