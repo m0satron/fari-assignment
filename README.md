@@ -1,6 +1,10 @@
 # FARI-assignment
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a simple chatbot that uses OpenAI GPT-4 in the background.
+
+It can take a series of commands and use them to perform actions on the page, such as rendering different content, navigation, etc. 
+
+To add more features to the language model, go to the commands.ts inside the /store directory.
 
 ## Recommended IDE Setup
 
@@ -25,6 +29,19 @@ npm install
 ```sh
 npm run dev
 ```
+### Open a separate terminal window/tab and go to /backend
+
+* Add a .env file and add OPENAI_API_KEY= (add your own api key or ask me for one)
+
+```sh
+npm install
+```
+
+then
+
+```sh
+npm run dev
+```
 
 ### Type-Check, Compile and Minify for Production
 
@@ -32,10 +49,10 @@ npm run dev
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Format with Prettier
 
 ```sh
-npm run test:unit
+npm run format
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
