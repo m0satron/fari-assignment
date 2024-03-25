@@ -40,6 +40,11 @@ const icon = computed(() => icons[props.icon])
   width: 3rem;
   height: 3rem;
   transition: all 200ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: fn.opacity(c.$white, 0.8);
+  }
 
   &:active {
     background-color: fn.opacity(c.$white, 0.8);

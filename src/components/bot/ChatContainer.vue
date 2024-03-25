@@ -26,6 +26,5 @@ const textInput = ref<string>('')
 <style scoped lang="scss">
 .container {
   height: fit-content;
-  overflow: hidden;
 }
 </style>

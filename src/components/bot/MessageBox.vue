@@ -1,5 +1,5 @@
 <template>
-  <div ref="messageBox" class="flex flex-column justify-end message-box">
+  <div ref="messageBox" class="flex flex-column message-box">
     <TextBalloon
       :key="message.content"
       v-for="message in messages"
@@ -7,6 +7,7 @@
       class="mb-base"
       :class="message.role"
     />
+
     <LoadingBalloon v-if="loading" class="mb-base" />
   </div>
 </template>
@@ -35,7 +36,7 @@ watch(
 
 <style scoped lang="scss">
 .message-box {
-  height: 26rem;
+  height: 30rem;
   overflow: scroll;
   scroll-behavior: smooth;
   transition: all 200ms ease-in-out;
