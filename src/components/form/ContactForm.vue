@@ -92,7 +92,6 @@ const submit = () => {
   form.message = ''
 
   submitted.value = !submitted.value
-  // submitted.value = true;
 }
 </script>
 <style scoped lang="scss">

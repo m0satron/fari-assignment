@@ -28,7 +28,7 @@ const dividerClass = computed(() => ({
 
 .divider-vertical {
   width: b.$m;
-  height: 100%; /* You might want to set a fixed height depending on your layout */
+  height: 100%;
   background-color: c.$blue-light;
 }
 </style>

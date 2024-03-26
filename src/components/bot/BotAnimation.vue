@@ -45,13 +45,13 @@ const state = reactive({
 const setupAudioAnalysis = () => {
   audioContext = new window.AudioContext()
   analyser = audioContext.createAnalyser()
-  analyser.fftSize = 256 // Smaller FFT size for granularity
+  analyser.fftSize = 256
   dataArray = new Uint8Array(analyser.frequencyBinCount)
 
   if (audioElement.value) {
     const source = audioContext.createMediaElementSource(audioElement.value)
     source.connect(analyser)
-    analyser.connect(audioContext.destination) // Also connect to the destination so you can hear it
+    analyser.connect(audioContext.destination)
   }
 }
 

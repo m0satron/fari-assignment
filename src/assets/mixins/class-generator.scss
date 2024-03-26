@@ -4,7 +4,7 @@
   }
 
   @if $attribute == '' {
-    @error "You must provide an attribute and a prefix";
+    @error "You must provide an attribute";
   }
 
   @each $item, $value in $list {
